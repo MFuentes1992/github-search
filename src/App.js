@@ -9,14 +9,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav>
-          <div className="logo-side">
-            <Link to="/" className="link-c">Home</Link>
-          </div>
-          <div className="menu-container">
+        <Nav justifyContent="center">
+          <Link to="/" className="link-c">Home</Link>
           <Link to='/users' className="link-a">Users</Link>
-          <Link to='/repos' className="link-b">Repos</Link>
-          </div>
+          <Link to='/repos' className="link-b">Repos</Link>          
         </Nav>
         <Switch>
           <Route exact path='/' component={Index} ></Route>

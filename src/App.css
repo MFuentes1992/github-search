@@ -58,6 +58,7 @@ h2{
 }
 .nav{
   margin-top: 2%;
+  margin-bottom: 2%;
 }
 .container{
   position: relative;
@@ -73,11 +74,12 @@ h2{
 
 .link-a{
   color: #8a04ea;
+  margin-left: 5% !important;
   margin-right: 5% !important;
 }
 .link-c{
   color: #8a04ea;
-  margin-right: 90% !important;
+  /*margin-right: 90% !important;*/
 }
 
 .link-b{
@@ -108,6 +110,7 @@ h2{
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
+  margin-top: 3%;
 }
 
 .btn{
@@ -137,7 +140,7 @@ h2{
 @media screen and (max-width: 1024px){
   .link-c{
     color: #8a04ea;
-    margin-right: 80% !important;
+    /*margin-right: 80% !important;*/
   }
 }
 /***** MOBILE *****/
