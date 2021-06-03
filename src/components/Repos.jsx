@@ -1,12 +1,12 @@
 import {React, useEffect, useState} from 'react';
 import {REPO_URL_ALL, REPO_URL} from './API';
 import {Repo} from './Repo';
+import {Search} from './Search';
 import axios from 'axios';
 
 export const Repos = () => {
     //state
-    const [Repos, setRepos] = useState([]);
-    const [search, setSearch] = useState([]);
+    const [Repos, setRepos] = useState([]);    
 
     //-- Fetching all repos
     const fetchRepos = () => {
@@ -22,17 +22,11 @@ export const Repos = () => {
         fetchRepos();
     },[]);
 
-    //-- Handle Search Box event
-    const handleChange = (event) => {
-        setSearch(event.target.value);
-        console.log(search);
-    }   
-
     //-- Handle Click Search event
-    const handleSearch = () => {
-        let url = `${REPO_URL}${search}`;
-        console.log(url);
-        axios.get(`${REPO_URL}${search}`).then(resp => {
+    const handleSearchClick= (value) => {
+        let url = `${REPO_URL}${value}`;
+        //console.log(url);
+        axios.get(url).then(resp => {
             setRepos(resp.data.items);
         });
     }
@@ -40,8 +34,7 @@ export const Repos = () => {
     return (
         <div className="repo-container">
             <div className="search-box">
-                <input type="text" value={search} onChange={handleChange}/>
-                <button onClick={handleSearch}>Search</button>
+                <Search handleClick={handleSearchClick}/>
             </div>
             <div className="repo-list">
                 {
