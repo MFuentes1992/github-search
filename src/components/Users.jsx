@@ -38,7 +38,7 @@ export const Users = () => {
             </div>
             <div className="user-list">
                 {
-                    users.length > 1 ?
+                    users.length > 0 ?
                     users.map(user => {
                         return <User key={user.id} imageUrl={user.avatar_url} userName={user.login} score={user.score} link={user.html_url} />
                     }) :

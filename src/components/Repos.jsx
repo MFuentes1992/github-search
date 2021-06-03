@@ -38,7 +38,7 @@ export const Repos = () => {
             </div>
             <div className="repo-list">
                 {
-                    Repos.length > 1 ?
+                    Repos.length > 0 ?
                     Repos.map(repo => {
                         return <Repo key={repo.id} name={repo.full_name} description={repo.description} url={repo.html_url} />
                     }) :
