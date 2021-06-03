@@ -1,3 +1,15 @@
+a{
+  text-decoration: none !important;  
+  color: #383838;
+}
+
+a:hover{
+  text-decoration: none !important;
+
+}
+h2{
+  color: #383838 !important;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +47,82 @@
   to {
     transform: rotate(360deg);
   }
+}
+.nav{
+  margin-top: 2%;
+}
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.Logo{
+  position: relative;
+  width: 60%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.link-a{
+  color: #8a04ea;
+  margin-right: 5% !important;
+}
+.link-c{
+  color: #8a04ea;
+  margin-right: 90% !important;
+}
+
+
+.link-a:hover{
+  /*color: #FFF !important;*/
+}
+
+.link-b{
+  color: #8a04ea;
+  margin-right: 5% !important;
+}
+
+.link-b:hover{
+  /*color: #FFF !important;*/
+}
+
+.logo-side{
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+.menu-container{
+  position: relative;
+  width: 50%;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.search-container{
+  position: relative;
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.btn{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.user-list{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card{
+  margin-bottom: 2%;
 }

@@ -1,4 +1,5 @@
 import {React, useEffect, useState} from 'react';
+import { Form, Button} from 'bootstrap-4-react';
 
 export const Search = ({handleClick}) => {
     //-- Handle State management
@@ -14,9 +15,9 @@ export const Search = ({handleClick}) => {
     }
     //-- Search View
     return (
-        <div>
-                <input type="text" value={search} onChange={typeChange}/>
-                <button onClick={searchClick}>Search</button>
+        <div className="search-container">
+                <Form.Input type="text" value={search} onChange={typeChange}/>
+                <Button info outline onClick={searchClick}>Search</Button>
         </div>
     )
 }

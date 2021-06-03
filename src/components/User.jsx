@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Card } from 'bootstrap-4-react';
 
 export const User = ({imageUrl, userName, score, link}) => {
     return (
-        <div className="user-card">
-            <div className="image-user">
-                <img src={imageUrl} alt="Avatar" />
-            </div>
-            <div className="body-user">
+        <Card style={{ width: '18rem' }}>
+            <Card.Image src={imageUrl} alt="Avatar" />
+            <Card.Body className="body-user">
                 <a href={link} target="_blank">
                     <h2>{userName}</h2>
                 </a>
@@ -17,7 +16,7 @@ export const User = ({imageUrl, userName, score, link}) => {
                     <p></p>
                 }
                 
-            </div>
-        </div>
+            </Card.Body>
+        </Card >
     )
 }

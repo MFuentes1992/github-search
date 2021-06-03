@@ -1,5 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Navbar, Nav, Button} from 'bootstrap-4-react';
 import {Index} from './components/Index';
 import {Repos} from './components/Repos';
 import {Users} from './components/Users';
@@ -8,19 +9,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="navbar">
+        <Nav>
           <div className="logo-side">
-            <Link to="/">Home</Link>
+            <Link to="/" className="link-c">Home</Link>
           </div>
           <div className="menu-container">
-            <button>
-              <Link to='/users'>Users</Link>
-            </button>
-            <button>
-              <Link to='/repos'>Repos</Link>
-            </button>
+          <Link to='/users' className="link-a">Users</Link>
+          <Link to='/repos' className="link-b">Repos</Link>
           </div>
-        </div>
+        </Nav>
         <Switch>
           <Route exact path='/' component={Index} ></Route>
           <Route exact path='/repos' component={Repos} ></Route>
