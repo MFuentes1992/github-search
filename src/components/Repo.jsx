@@ -1,17 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Card } from 'bootstrap-4-react';
 
 export const Repo = ({name, description, url}) => {
     return (
-        <div className="repo-card">
-            <div className="repo-header">
-                <h2>{name}</h2>
-            </div>
-            <div className="repo-boy">
-                <p>{description}</p>
-            </div>
-            <div className="repo-footer">
-                <a href={url} target="_blank">Go</a>
-            </div>
-        </div>
+        <Card style={{ width: '18rem' }} className="repo-card">
+            <Card.Title>{name}</Card.Title>
+            <Card.Text>
+                {description}
+            </Card.Text>
+            <Card.Link href={url}>View repo</Card.Link>
+        </Card>
     )
 }

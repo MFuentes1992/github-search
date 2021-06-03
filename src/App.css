@@ -25,6 +25,14 @@ h2{
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -72,18 +80,9 @@ h2{
   margin-right: 90% !important;
 }
 
-
-.link-a:hover{
-  /*color: #FFF !important;*/
-}
-
 .link-b{
   color: #8a04ea;
   margin-right: 5% !important;
-}
-
-.link-b:hover{
-  /*color: #FFF !important;*/
 }
 
 .logo-side{
@@ -125,4 +124,26 @@ h2{
 }
 .card{
   margin-bottom: 2%;
+}
+
+.repo-list{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+/***** OLD LAPTOPS *****/
+@media screen and (max-width: 1024px){
+  .link-c{
+    color: #8a04ea;
+    margin-right: 80% !important;
+  }
+}
+/***** MOBILE *****/
+@media screen and (max-width: 768px){
+  .search-container{
+    margin-top: 5%;
+    width: 80%;
+  }
 }
